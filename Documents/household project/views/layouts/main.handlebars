@@ -1,0 +1,229 @@
+<html>
+<head>
+
+<style type="text/css">
+.setedit{
+    margin-left:120px;
+    margin-top:100px;
+
+
+
+}
+
+
+#topsection{
+ border:1px solid black;
+    margin:0px auto;
+    background-image:url('img/try.jpg');
+    background-size:1200px 800px;
+    height:800px;
+    width:1200px;
+
+}
+    .headeredit{
+     margin-top:30px;
+        border:2px solid black;
+        border-radius:20px;
+        background-color:rgb(176,224,230);
+        padding:5px;
+    }
+.sep1{
+
+    font-size:26px;
+    border:2px solid black;
+    border-radius:20px;
+    padding:5px;
+    background-color:red;
+    color:white;
+}
+.sep{
+    margin-top:100px;
+    color:white;
+    font-size:36px;
+}
+
+
+
+    body{
+
+
+        background-color:rgb(245,245,245);
+        background-repeat:no-repeat;
+
+
+    }
+    #header1{
+        position:absolute;
+        top:0px;
+        left:60%;
+    }
+
+#edited{
+    font-size:36px;
+}
+    #edited .edd a{
+
+background-color:rgb(65,105,225);
+       color:white;
+
+        font-size: 24px;
+        margin-left:200px;
+        border:2px solid black;
+        border-radius:20px;
+        padding:10px;
+
+    }
+    #edited .edd a {
+
+        text-decoration: none;
+    }
+
+#headerForm{
+
+  margin-top:300px;
+margin-left:400px;
+    width:300px;
+    height:200px;
+    border:20px solid black;
+    background-color:rgb(160,160,160);
+    color:white;
+
+
+
+}
+#btn{
+    margin-top:20px;
+   margin-left:100px;
+}
+    #unna{
+        margin-top:50px;
+    }
+    #linkEdit{
+
+
+
+
+border:2px solid black;
+        padding:10px;
+        background-color:rgb(65,105,225);
+        color:white;
+        border-radius:20px;
+     margin-left:1000px;
+        font-size:20px;
+
+    }
+    .urlEdit{
+        margin-top:30px;
+
+    }
+
+    .sedit{
+
+        font-size:24px;
+    }
+
+    .email {
+        margin-left:44px;
+    }
+
+
+
+
+.f1{
+    color:white;
+    border:2px solid black;
+    border-radius:20px;
+    padding:10px;
+    background-color:red;
+    margin-left:60px;
+}
+#editFinal{
+    font-size:30px;
+    color:green;
+    margin-top:100px;
+    margin-left:200px;
+}
+
+.navlist{
+    margin-top:50px;
+    margin-left:100px;
+
+}
+
+    .navlist li{
+
+        display:inline;
+        margin-left:30px;
+        font-size:30px;
+
+    }
+
+    a {
+
+        color:black;
+    }
+
+
+
+
+ul.navlist li a.on
+{
+ color:yellow;
+
+}
+table{
+  width:600px;
+
+    margin-left:50px;
+
+
+
+}
+
+table,td {
+font-size:28px;
+
+}
+td{
+    height:100px;
+}
+</style>
+
+
+
+</head>
+
+
+
+
+<body>
+<div id="topsection">
+<div id="header">
+</div>
+
+
+    {{{body}}}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+    <script>
+    $(function(){
+
+        var url      = window.location.href;
+        var $filename = '/'+(url.split('/').pop().split('#')[0].split('?')[0]);
+        console.log(url);
+        console.log($filename);
+        $('ul.navlist li a').each(function(){
+            var $href = $(this).attr('href');
+            console.log($href);
+            if ( ($href == $filename)  ) {
+                $(this).addClass('on');
+            } else {
+                $(this).removeClass('on');
+            }
+        });
+    });
+</script>
+</div>
+</body>
+
+</html>

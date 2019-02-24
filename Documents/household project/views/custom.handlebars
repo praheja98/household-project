@@ -1,0 +1,32 @@
+<script>
+    window.onload=optionrandomize;
+
+    function optionrandomize() {
+        var ul = document.querySelector('ul');
+        for (var i = ul.children.length; i >= 0; i--) {
+            ul.appendChild(ul.children[Math.random() * i | 0]);
+        }
+    }
+
+
+</script>
+
+
+
+
+<form action="/nextques" method="POST">
+{{#each question}}
+    <h1> Please select one of the following </h1> <br>
+    <input type="hidden" name="question" value="{{qid}}">
+    {{qid}}
+<ul>
+    {{#each choice}}
+        <li>
+        <input type="checkbox" name="answer" value="{{description}}"> {{description}} <br>
+        </li>
+    {{/each}}
+</ul>
+{{/each}}
+
+<button type="submit"> Sub</button>
+</form>

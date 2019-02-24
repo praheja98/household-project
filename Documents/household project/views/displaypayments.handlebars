@@ -1,0 +1,21 @@
+
+<style>
+    .payment-container{
+        border:2px solid black;
+        padding:10px;
+        background-color:lightblue;
+    }
+
+
+</style>
+
+
+<div id="container">
+{{#each paymentInfo}}
+    <div class="payment-container">
+    <div class="contents"> Amount Due {{amountDue}} </div>
+    <div class="contents"> User {{username}}</div>
+    </div>
+{{/each}}
+</div>
+<div> Total Amount Due is {{amountDue.amount}}</div>

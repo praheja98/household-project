@@ -1,0 +1,8 @@
+
+<h1> Please select one of the households </h1>
+<form action="/paymentpage" method="POST">
+{{#each household}}
+    <input type="checkbox" name="household" value="{{name}}"> {{name}} <br>
+{{/each}}
+    <button type="submit"> Submit </button>
+</form>

@@ -1,0 +1,20 @@
+<form method="POST" action="/transactionpayment">
+
+    <!-- Have to modify to choose from the recent payments -->
+    {{#each items}}
+    <input type="checkbox" name='paymentType' value="{{paymentType}}"> {{paymentType}}
+     {{/each}}
+
+    <br>
+     <input type="number" name="amount"> Amount <br>
+     <input type="hidden" name="username" value="{{username}}" />
+
+    {{#if household}}
+        <input type="hidden" name="household" value="{{household}}">
+    {{/if}}
+
+    <button type="submit" > Proceed </button>
+
+
+
+</form>

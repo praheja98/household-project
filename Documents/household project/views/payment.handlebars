@@ -1,0 +1,24 @@
+<script>
+    window.onload=generateRandomPaymentId;
+    function generateRandomPaymentId() {
+        var getPayment = document.getElementsByClassName('payment')[0];
+        getPayment.value = Math.random().toString(36).substring(7);
+    }
+</script>
+
+<form method="POST" action="/makepayment">
+    <input type="hidden" name="paymentId" class="payment"> <br>
+    <input type="hidden" name="household" value="{{householdName}}"> <br>
+    <input type="text" name="type"> Enter payment type <br>
+    <input type="number" name="amount"> Enter amount due <br>
+    <input type="date" name="date"> Enter date due <br>
+    <div> Select the members you would like to split the bill with </div>
+    {{#each member}}
+        <input type="checkbox" name="person" value="{{username}}"> {{username}} <br>
+    {{/each}}
+    <button type="submit"> Make payment </button>
+    <a href="/invite/{{householdName}}"> Click here to invite members to this household </a> <br>
+
+
+
+</form>

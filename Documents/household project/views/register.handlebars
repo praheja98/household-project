@@ -1,0 +1,17 @@
+<div class="urlEdit"><a href="/Logout" id="linkEdit"> Logout </a></div>
+<form action="/processReg1" method="POST" id="headerForm">
+
+
+    Enter username &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="uname" id="unna"> <br>
+    Enter email <input type="email" name="email" class="email"> <br>
+
+    {{#if household}}
+        <input type="hidden" name="household" value="{{household}}">
+    {{/if}}
+
+
+    Enter password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pword"> <br>
+    Re-enter password <input type="text" name="pword2"> <br>
+    <button onclick="submit" id="btn">Register</button>
+
+</form>
